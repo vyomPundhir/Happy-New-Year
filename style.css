@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Dancing Script", cursive;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #303030;
+}
+.card-outer {
+	padding: 10px;
+	border: 5px solid orangered;
+}
+.card {
+	border-style: solid;
+	border-width: 5px;
+	border-color: red;
+	background-color: #151515;
+	width: 750px;
+	height: 420px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 0px;
+	animation-name: border;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+img {
+	width: 200px;
+	position: relative;
+	animation-name: image;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+pre {
+	width: 300px;
+	color: #f0f0f0;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	position: relative;
+	animation-name: text;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes text {
+	0% {
+		color: #f0f0f0;
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		color: red;
+		left: -80px;
+		top: 0px;
+	}
+	50% {
+		color: yellow;
+		left: -80px;
+		top: -80px;
+	}
+	75% {
+		color: green;
+		left: 0px;
+		top: -80px;
+	}
+	100% {
+		color: cyan;
+		left: 0px;
+		top: 0px;
+	}
+}
+@keyframes border {
+	0% {
+		border-color: #f0f0f0;
+	}
+	25% {
+		border-color: red;
+	}
+	50% {
+		border-color: yellow;
+	}
+	75% {
+		border-color: green;
+	}
+	100% {
+		border-color: cyan;
+	}
+}
+@keyframes image {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		left: 80px;
+		top: 0px;
+	}
+	50% {
+		left: 80px;
+		top: 80px;
+	}
+	75% {
+		left: 0px;
+		top: 80px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+@media (width <=500px) {
+	.card {
+		height: 530px;
+		width: 320px;
+		flex-direction: column-reverse;
+		gap: 0px;
+	}
+	pre {
+		font-size: 30px;
+	}
+	@keyframes image {
+		0% {
+			left: 0px;
+			top: 0px;
+		}
+		25% {
+			left: 45px;
+			top: 0px;
+		}
+		50% {
+			left: 45px;
+			top: 80px;
+		}
+		75% {
+			left: 0px;
+			top: 80px;
+		}
+		100% {
+			left: 0px;
+			top: 0px;
+		}
+	}
+	@keyframes text {
+		0% {
+			color: #f0f0f0;
+			left: 0px;
+			top: 0px;
+		}
+		25% {
+			color: red;
+			left: -50px;
+			top: 0px;
+		}
+		50% {
+			color: yellow;
+			left: -50px;
+			top: -80px;
+		}
+		75% {
+			color: green;
+			left: 0px;
+			top: -80px;
+		}
+		100% {
+			color: cyan;
+			left: 0px;
+			top: 0px;
+		}
+	}
+}
